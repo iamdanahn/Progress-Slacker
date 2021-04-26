@@ -1,5 +1,5 @@
 const express = require("express");
-const app = express();
+const app = express(); //app is an instance of express
 const mongoose = require("mongoose");
 const passport = require("passport");
 const db = require("./config/keys").mongoURI;
@@ -19,6 +19,8 @@ mongoose
   .then(() => console.log("Connected to MongoDB successfully"))
   .catch((err) => console.log(err));
 
+
+// app.use(), used for middlewares
 app.use(
   bodyParser.urlencoded({
     extended: false,
